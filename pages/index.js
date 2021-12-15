@@ -6,7 +6,6 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('/api/v1/message');
-      console.log(response);
 
       if (response.ok) {
         const result = await response.json();
