@@ -1,5 +1,7 @@
-const handler = (req, res) => {
-  res.status(200).json({ msgSuccess: 'Hello, you fetch data!' });
+import { fetchDataHomepage } from '../../../controllers/home';
+
+const handler = async (req, res) => {
+  await fetchDataHomepage(req, res);
 };
 
 export default handler;
